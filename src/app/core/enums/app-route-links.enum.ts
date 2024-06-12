@@ -1,3 +1,4 @@
 export enum AppRouteLinks {
-  PERSON = 'person',
+  FAVORITE = 'favorite',
+  HOME= 'home'
 }

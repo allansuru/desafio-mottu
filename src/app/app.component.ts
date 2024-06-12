@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'desafio-mottu';
+  selectedModule = 'inicio'; // Definimos 'inicio' como o valor inicial
 }

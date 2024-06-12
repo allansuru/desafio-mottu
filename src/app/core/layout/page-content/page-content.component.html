@@ -1,10 +1,8 @@
-<div class="page-main-content" [ngClass]="{'has-header': hasHeader, 'has-footer': hasFooter}">
-  <div fxLayout="column">
-    <div [ngClass]="{'bg-white': bgColor==='white'}" fxLayout="row" fxLayoutAlign="center center">
-      <div fxFlex="100%" fxFlex.gt-md="100%" fxFlex.sm="100%" fxLayout="column">
-        <div class="content-container" [ngStyle.xs]="{'padding': '12px 16px'}">
-          <ng-content></ng-content>
-        </div>
+<div class="page-main-content" [ngClass]="{'has-header': hasHeader, 'has-footer': hasFooter}" fxLayout="column" fxLayoutAlign="center center">
+  <div fxFlex="0 1 80%" fxFlex.xs="95%" fxFlex.sm="90%" fxFlex.md="80%" fxFlex.lg="70%" fxFlex.xl="60%" class="content-wrapper">
+    <div [ngClass]="{'bg-white': bgColor==='white'}" fxLayout="column" fxLayoutAlign="center center">
+      <div class="content-container" [ngStyle.xs]="{'padding': '12px 16px'}">
+        <ng-content></ng-content>
       </div>
     </div>
   </div>
