@@ -1,0 +1,9 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" style="font-size: 12px">
+  <form name="searchForm" [formGroup]="form" class="search-form">
+    <mat-form-field fxFlex appearance="outline">
+      <mat-label>Pesquisar</mat-label>
+      <input matInput formControlName="title"  [formControl]="filteredCtrl" />
+      <mat-icon (click)="searchHandler()" matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+</div>

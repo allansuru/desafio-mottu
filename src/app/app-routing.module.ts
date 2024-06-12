@@ -14,7 +14,7 @@ const routes: Routes = [
     path: AppRouteLinks.FAVORITE,
 
     loadChildren: () =>
-      import('./modules/person/person.module').then(m => m.PersonModule)
+      import('./modules/character/character.module').then(m => m.CharacterModule)
   },
 ];
 
