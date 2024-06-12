@@ -1,0 +1,4 @@
+export enum GlobalConfig {
+  DEFAUL_TOTAL_ITEMS_PER_PAGE = 10,
+  DEFAULT_STATISTICS = 999,
+}

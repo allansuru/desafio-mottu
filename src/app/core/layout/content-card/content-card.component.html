@@ -1,0 +1,47 @@
+<mat-card
+  [ngClass]="{ 'mat-elevation-z0': !isShowShadow }"
+  class="mb-4"
+  [class.border-box]="isShowCardBorder"
+  [class.no-box-shadow]="isShowCardBorder"
+  [@pageAnimations]="loading ? 'initial' : 'final'"
+>
+  <mat-toolbar *ngIf="title">
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-betweeen center">
+      <div fxFlex fxLayout="column">
+        <span>{{ title }}</span>
+        <span class="mat-body-1">{{ subtitle }}</span>
+      </div>
+
+      <div fxLayout="row" fxLayoutGap="16px">
+        <ng-content select="[menu-buttons]"> </ng-content>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-divider *ngIf="isShowTitleBorder"></mat-divider>
+  <mat-card-content
+    class="card-main-content"
+    [ngStyle]="{ 'min-height.px': minHeigth }"
+  >
+    <ng-container *ngIf="loading; else elseTemplate">
+      <div
+        class="loading-container"
+        [ngStyle]="{ 'min-height.px': minHeigth }"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+      >
+        <div [hidden]="loading">
+          <mat-progress-spinner
+            mode="indeterminate"
+            color="primary"
+          ></mat-progress-spinner>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="card-projected-content">
+        <ng-content select="[main-content]"> </ng-content>
+      </div>
+    </ng-template>
+  </mat-card-content>
+</mat-card>

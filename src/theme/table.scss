@@ -1,0 +1,24 @@
+:root {
+  .dh-table {
+    table {
+      width: 100%;
+      background-color: red;
+    }
+    .mat-cell,
+    .mat-header-cell {
+      padding-right: 16px;
+    }
+    .select-column {
+      max-width: 40px;
+      padding-right: 0px !important;
+    }
+    .avatar-column {
+      max-width: 60px;
+    }
+
+    .action-column {
+      max-width: 60px;
+      padding-right: 0 !important;
+    }
+  }
+}

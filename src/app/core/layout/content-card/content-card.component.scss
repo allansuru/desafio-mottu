@@ -1,0 +1,26 @@
+:host {
+  .card-main-content,
+  .loading-container {
+    min-height: 100px;
+    margin-top: 24px;
+  }
+
+  .no-box-shadow {
+    box-shadow: none;
+  }
+
+  .content-card-header {
+    ::ng-deep .mat-card-header-text {
+      margin-left: 0;
+    }
+  }
+
+  .loading-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    margin: auto;
+  }
+}
