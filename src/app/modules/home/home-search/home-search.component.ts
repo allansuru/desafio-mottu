@@ -24,15 +24,12 @@ export class HomeSearchComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.initForm();
 
-    this.searchSubject.pipe(
+    this.searchSubscription = this.filteredCtrl.valueChanges.pipe(
       debounceTime(300),
-      distinctUntilChanged(),
+      distinctUntilChanged()
     ).subscribe((searchTerm: string) => {
       if (searchTerm.length >= 3) {
-        this.homeService.dispatchAction({
-          action: HomeAction.SEARCH,
-          data: searchTerm,
-        });
+        this.dispatchSearch(searchTerm);
       }
     });
   }
@@ -43,13 +40,17 @@ export class HomeSearchComponent implements OnInit, OnDestroy {
     }
   }
 
-  searchHandler() {
-    this.searchSubject.next(this.title);
-  }
 
   private initForm(): void {
     this.form = this.formBuilder.group({
       title: [null]
+    });
+  }
+
+  private dispatchSearch(searchTerm: string): void {
+    this.homeService.dispatchAction({
+      action: HomeAction.SEARCH,
+      data: searchTerm,
     });
   }
 
