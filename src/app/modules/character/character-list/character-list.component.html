@@ -1,23 +1,24 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-around start" class="character-list-container">
-    <ng-container *ngIf="data && data.length > 0; else noResults">
-      <mat-card *ngFor="let character of data" fxFlex="30" class="character-card">
-        <div class="card-header">
-          <img mat-card-image [src]="character.image" alt="{{ character.name }}">
-          <button mat-icon-button class="favorite-icon" (click)="addToFavorites(character)">
-            <mat-icon>favorite</mat-icon>
-          </button>
-        </div>
-        <mat-card-content>
-          <h2>{{ character.name }}</h2>
-          <p>{{ character.species }}</p>
-        </mat-card-content>
-      </mat-card>
+    <ng-container *ngIf="_data && _data.length > 0; else noResults">
+        <mat-card *ngFor="let character of _data " fxFlex="30" class="character-card">
+            <div class="card-header">
+                <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+                <button mat-icon-button class="favorite-icon" (click)="toggleFavorite(character)">
+                    <mat-icon [class.favorited]="character.isFavorite">favorite</mat-icon>
+                </button>
+            </div>
+            <mat-card-content>
+                <h2>{{ character.name }}</h2>
+                <p>{{ character.species }}</p>
+            </mat-card-content>
+        </mat-card>
     </ng-container>
     <ng-template #noResults>
-      <div class="no-results" fxLayout="column" fxLayoutAlign="center center">
-        <h1>Nada foi encontrado!</h1>
-        <h2>Tente realizar uma nova busca</h2>
-      </div>
+        <div class="no-results" fxLayout="column" fxLayoutAlign="center center">
+            <h1>Nada foi encontrado!</h1>
+            <h2>Tente realizar uma nova busca</h2>
+        </div>
     </ng-template>
-  </div>
-  
+</div>
+
+

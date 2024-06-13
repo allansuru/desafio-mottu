@@ -30,7 +30,9 @@ export class HomeSearchComponent implements OnInit, OnDestroy {
     ).subscribe((searchTerm: string) => {
       if (searchTerm.length >= 3) {
         this.dispatchSearch(searchTerm);
+        return
       }
+      this.dispatchSearch(searchTerm);
     });
   }
 

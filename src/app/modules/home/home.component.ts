@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Observable, Subject, takeUntil, tap } from 'rxjs';
+import { Observable, Subject, of, takeUntil, tap } from 'rxjs';
 import { HomeService } from './shared/services/home.service';
 import { HomeAction } from './shared/enums/home-action.enum';
 import { ComponentEvent } from '@core/abstract-classes/component-event-handler/component-event';
@@ -18,7 +18,7 @@ import { myAnimations } from '@core/animations';
 })
 export class HomeComponent implements OnInit {
     loading$!: Observable<boolean>;
-    characters$!: Observable<any>;
+    characters$!: Observable<any>
     private onDestroy$: Subject<void> = new Subject<void>();
     constructor(public homeService: HomeService, private homeStore: Store<{ character: Character }>) { }
 
@@ -54,8 +54,7 @@ export class HomeComponent implements OnInit {
 
     private initStore() {
         this.loading$ = this.homeStore.pipe(select(selectCharacterLoading));
-        this.characters$ = this.homeStore.pipe(select(selectAllCharacters));
-      }
+        this.characters$ = this.homeStore.pipe(select(selectAllCharacters));      }
     
 
 }

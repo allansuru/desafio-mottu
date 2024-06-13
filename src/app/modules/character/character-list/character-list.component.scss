@@ -26,4 +26,17 @@
     position: absolute;
     top: 8px;
     right: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    .favorited {
+        color: red;
+    }
+    .no-favorited {
+        color: white
+    }
+
   }
+  
+

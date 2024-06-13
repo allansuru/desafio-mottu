@@ -14,7 +14,7 @@ import { SpinnerModule } from '@core/layout/spinner/spinner.module';
 @NgModule({
   declarations: [
     HomeSearchComponent,
-    HomeComponent
+    HomeComponent,
   ],
 
   imports: [
@@ -28,6 +28,7 @@ import { SpinnerModule } from '@core/layout/spinner/spinner.module';
     MatIconModule,
     CharacterModule,
     SpinnerModule
+
   ]
 })
 export class HomeModule { }

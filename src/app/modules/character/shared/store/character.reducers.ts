@@ -5,7 +5,7 @@ import * as CharacterAction from './character.actions';
 import { act } from '@ngrx/effects';
 import { Character } from '../interfaces/character.interface';
 
-export const CharacterFeatureKey = 'CharacterState';
+export const CharacterFeatureKey = 'characters';
 
 
 export interface State extends EntityState<Character> {
