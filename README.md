@@ -59,3 +59,7 @@ You can watch a demo of the application here: [Video Demo](https://www.loom.com/
 
 **Note**: The demonstration of the state management is cut off in the video, but you can find a screenshot of it here: <img src="images\state.png" alt="Texto Alternativo">
 
+
+## HOST
+
+https://desafio-mottu.web.app/home
