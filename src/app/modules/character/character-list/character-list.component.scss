@@ -1,8 +1,7 @@
 .character-list-container {
     width: 100%;
     margin: 0 auto;
-    padding: 16px;
-    min-width: 1200px
+    min-width: 1250px
   }
   
   .character-card {
@@ -17,9 +16,23 @@
   }
   
   .no-results {
-    text-align: center;
-    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  
+  .no-results-box {
+    background-color: #0A0A0A;
     color: white;
+    border-radius: 15px;
+
+    text-align: center;
+    height:40vh;
+
+    min-width: 1250px
   }
   
   .favorite-icon {

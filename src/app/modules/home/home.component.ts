@@ -27,6 +27,11 @@ export class HomeComponent implements OnInit {
         this.initStore()
     }
 
+    ngOnDestroy(): void {
+        this.onDestroy$.next();
+      }
+    
+
     private childrenListner() {
         this.homeService.onEvent
             .pipe(takeUntil(this.onDestroy$), tap((event) => {

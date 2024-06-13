@@ -59,6 +59,7 @@ const CharacterReducer = createReducer(
     }
     ),
     on(CharacterAction.addFavorite, (state, { data }) => {
+
       const isFavorite = state.favorites.some(fav => fav.id === data.id);
       const favorites = isFavorite
         ? state.favorites.filter(fav => fav.id !== data.id)

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HomeService } from './modules/home/shared/services/home.service';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { Character } from './modules/character/shared/interfaces/character.interface';

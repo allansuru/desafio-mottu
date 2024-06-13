@@ -15,6 +15,7 @@ import { SpinnerModule } from '@core/layout/spinner/spinner.module';
   declarations: [
     HomeSearchComponent,
     HomeComponent,
+
   ],
 
   imports: [
@@ -28,7 +29,6 @@ import { SpinnerModule } from '@core/layout/spinner/spinner.module';
     MatIconModule,
     CharacterModule,
     SpinnerModule
-
   ]
 })
 export class HomeModule { }

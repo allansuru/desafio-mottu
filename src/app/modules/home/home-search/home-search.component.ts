@@ -11,7 +11,6 @@ import { Subject, Subscription, debounceTime, distinctUntilChanged } from 'rxjs'
 })
 export class HomeSearchComponent implements OnInit, OnDestroy {
   form!: FormGroup;
-  private searchSubject: Subject<string> = new Subject<string>();
   private searchSubscription: Subscription = new Subscription();
   filteredCtrl = new FormControl();
 

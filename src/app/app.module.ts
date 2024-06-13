@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FlexModule, FlexLayoutModule } from '@angular/flex-layout';
+import { CharacterModule } from './modules/character/character.module';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { FlexModule, FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     MatSnackBarModule,
     MatButtonToggleModule,
-    FlexModule, FlexLayoutModule
+    FlexModule, FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
