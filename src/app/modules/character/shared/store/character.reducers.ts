@@ -43,10 +43,12 @@ const CharacterReducer = createReducer(
       });
     }),
   
-    on(CharacterAction.fetchCharactersFailure, (state, action) => ({
-      ...state,
-      ...{ loading: false, },
-    })),
+    on(CharacterAction.fetchCharactersFailure, (state, action) => {
+      return adapter.removeAll({
+        ...state,
+        loading: false,
+      });
+    }),
   
     on(CharacterAction.fetchCharactersSuccess, (state, action) => {
       return adapter.setAll(action.data, {

@@ -38,15 +38,7 @@ export class HttpApiService {
 
 
   private handleError({ error }: any) {
-    this.snackBar.open(error.status_message, 'Close', {
-      duration: 2000,
-      verticalPosition: 'top',
-      horizontalPosition: 'end',
-      panelClass: ['red-snackbar'],
-    });
-    return of({
-      error,
-    });
+    return of(error);
   }
 
 }

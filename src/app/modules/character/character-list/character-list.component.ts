@@ -15,6 +15,10 @@ export class CharacterListComponent  {
   public _data: Character[] = [];
   @Input() set data(value: Character[]) {
     debugger
+    if (value.length === 0) {
+      this._data = []
+      return;
+    }
     this._data = value || [];
     this.updateFavoriteStatus();
   }
