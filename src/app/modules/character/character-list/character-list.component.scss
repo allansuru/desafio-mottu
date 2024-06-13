@@ -2,13 +2,14 @@
     width: 100%;
     margin: 0 auto;
     padding: 16px;
+    min-width: 1200px
   }
   
   .character-card {
     margin: 16px;
     background-color: #000; 
     color: white; 
-  width: 200px;
+    width: 200px;
   }
   
   .character-card h2, .character-card p {
