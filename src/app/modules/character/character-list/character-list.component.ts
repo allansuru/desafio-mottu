@@ -14,7 +14,6 @@ import { selectCharacterFavorites } from '../shared/store/character.selectors';
 export class CharacterListComponent  {
   public _data: Character[] = [];
   @Input() set data(value: Character[]) {
-    debugger
     if (value.length === 0) {
       this._data = []
       return;

@@ -9,8 +9,9 @@
         <app-spinner [size]="20" [shouldShow]="loading"></app-spinner>
     </ng-container>
     <ng-template #loading>
-        <div class="home-content mt-4" fxLayout="column" fxLayoutAlign="center center">
-            <app-character-list [data]="characters$ | async" ></app-character-list>
+        <div class="home-content mt-4" fxLayout="column" fxLayoutAlign="center center"
+            [@animate]="{ value: '*', params: { delay: '100ms', x: '-25px' } }">
+            <app-character-list [data]="characters$ | async"></app-character-list>
         </div>
     </ng-template>
 </div>

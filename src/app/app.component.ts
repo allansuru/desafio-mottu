@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { HomeService } from './modules/home/shared/services/home.service';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+import { Character } from './modules/character/shared/interfaces/character.interface';
+import { selectCharacterFavoritesLenght } from './modules/character/shared/store/character.selectors';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +12,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'desafio-mottu';
-  selectedModule = 'inicio'; // Definimos 'inicio' como o valor inicial
+  selectedModule = 'inicio'; 
+  count$!: Observable<number>
+
+  constructor(private homeStore: Store<{ character: Character }> ) {
+        this.count$ = this.homeStore.pipe(select(selectCharacterFavoritesLenght));      
+
+  }
 }

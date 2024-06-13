@@ -1,0 +1,41 @@
+.rounded-toggle-group {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .rounded-toggle-group .mat-button-toggle:first-child {
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .rounded-toggle-group .mat-button-toggle:last-child {
+    border-radius: 0 50px 50px 0;
+  }
+  
+  .rounded-toggle-group .mat-button-toggle {
+    background-color: black;
+    color: white;
+  }
+  
+  .rounded-toggle-group .mat-button-toggle-checked {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .count-favorites {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 0.2em 0.4em;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    min-width: 8px;
+    min-height: 12px;
+    line-height: 0.7;
+  }
+  
+  .rounded-toggle-group .mat-button-toggle-checked .count-favorites {
+    background-color: black;
+    color: white;
+  }
+  

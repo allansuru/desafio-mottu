@@ -8,14 +8,15 @@
 
       <div fxFlex></div>
 
-      <mat-button-toggle-group [(value)]="selectedModule">
+      <mat-button-toggle-group [(value)]="selectedModule" #group="matButtonToggleGroup" class="rounded-toggle-group" appearance="legacy">
         <mat-button-toggle value="home" routerLink="/home" checked>
-          <mat-icon>home</mat-icon>
-          <span>Inicio</span>
+          <mat-icon class="ml-1">home</mat-icon>
+          <span  class="ml-1">Inicio</span>
         </mat-button-toggle>
         <mat-button-toggle value="favorito" routerLink="/favorite">
           <mat-icon>favorite</mat-icon>
-          <span>Favoritos</span>
+          <span  class="ml-1">Favoritos</span>
+          <strong class="count-favorites ml-2">{{count$ | async}}</strong>
         </mat-button-toggle>
       </mat-button-toggle-group>
     </div>

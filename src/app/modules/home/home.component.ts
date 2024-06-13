@@ -56,7 +56,6 @@ export class HomeComponent implements OnInit {
         this.loading$ = this.homeStore.pipe(select(selectCharacterLoading));
         this.characters$ = this.homeStore.pipe(select(selectAllCharacters));      }
     
-
 }
 
 

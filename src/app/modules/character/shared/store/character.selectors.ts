@@ -26,6 +26,6 @@ export const selectCharacterFavorites = createSelector(
 
 export const selectCharacterFavoritesLenght = createSelector(
     selectCharacterState,
-  (state) => state.favorites.length
+  (state) => state?.favorites?.length
 );
 
