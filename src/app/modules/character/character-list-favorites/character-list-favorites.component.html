@@ -1,0 +1,27 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around start" class="character-list-container">
+    <ng-container *ngIf="myFavorites && myFavorites.length > 0; else noResults">
+        <mat-card *ngFor="let character of myFavorites " fxFlex="30" class="character-card">
+            <div class="card-header">
+                <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+                <button mat-icon-button class="favorite-icon">
+                    <mat-icon [class.favorited]="true">favorite</mat-icon>
+                </button>
+            </div>
+            <mat-card-content>
+                <h2>{{ character.name }}</h2>
+                <p>{{ character.species }}</p>
+            </mat-card-content>
+        </mat-card>
+    </ng-container>
+    <ng-template #noResults>
+        <div class="no-results" fxLayout="column" fxLayoutAlign="center center">
+          <div class="no-results-box"  fxLayout="column"  fxLayoutAlign="center center">
+            <h1>Parece que você ainda não tem favoritos</h1>
+            <span>Volte à página inicial e escolha os melhores para você.</span>
+          </div>
+        </div>
+      </ng-template>
+      
+</div>
+
+

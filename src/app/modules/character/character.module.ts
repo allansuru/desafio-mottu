@@ -10,11 +10,15 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { CharacterComponent } from './character.component';
 import { CharacterRoutingModule } from './character-routing.module';
+import { CharacterListFavoritesComponent } from './character-list-favorites/character-list-favorites.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
     CharacterListComponent,
-    CharacterComponent
+    CharacterComponent,
+    CharacterListFavoritesComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +31,7 @@ import { CharacterRoutingModule } from './character-routing.module';
       characterReducers.reducer
     ),
     EffectsModule.forFeature([CharacterEffects]),
-    CharacterRoutingModule
+    CharacterRoutingModule,
   ],
   exports: [
       CharacterListComponent

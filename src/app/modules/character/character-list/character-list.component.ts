@@ -1,8 +1,8 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { Character } from '../shared/interfaces/character.interface';
 import { HomeService } from '../../home/shared/services/home.service';
 import { HomeAction } from '../../home/shared/enums/home-action.enum';
-import { Observable, Subject, Subscription, take, takeUntil } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { selectCharacterFavorites } from '../shared/store/character.selectors';
 
@@ -18,7 +18,7 @@ export class CharacterListComponent implements OnDestroy {
       this._data = []
       return;
     }
-    debugger
+
     this._data = value || [];
     this.updateFavoriteStatus();
   }
@@ -35,7 +35,6 @@ export class CharacterListComponent implements OnDestroy {
    this.subscriptions.unsubscribe();
    
   }
-
   
   toggleFavorite(character: Character): void {
     this.homeService.dispatchAction({
@@ -46,7 +45,6 @@ export class CharacterListComponent implements OnDestroy {
   private updateFavoriteStatus(): void {
    this.subscriptions.add(this.favorites$.pipe(
     ).subscribe(favorites => {
-      debugger
       this._data = this._data.map(character => ({
         ...character,
         isFavorite: favorites.some(fav => fav.id === character.id)

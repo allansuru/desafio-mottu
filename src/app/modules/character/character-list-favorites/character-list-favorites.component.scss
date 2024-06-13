@@ -1,0 +1,52 @@
+.character-list-container {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 1250px
+  }
+  
+  .character-card {
+    margin: 16px;
+    background-color: #000; 
+    color: white; 
+    width: 200px;
+  }
+  
+  .character-card h2, .character-card p {
+    color: white; 
+  }
+  
+  .no-results {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  
+  .no-results-box {
+    background-color: #0A0A0A;
+    color: white;
+    border-radius: 15px;
+
+    text-align: center;
+    height:40vh;
+    min-width: 1250px
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    .favorited {
+        color: red;
+    }
+
+
+  }
+  
+

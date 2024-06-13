@@ -31,6 +31,7 @@ export class HomeSearchComponent implements OnInit, OnDestroy {
         this.dispatchSearch(searchTerm);
         return
       }
+      this.dispatchSearch(searchTerm);
     });
   }
 

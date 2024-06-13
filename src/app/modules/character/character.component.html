@@ -1,1 +1,10 @@
-<p>character works!</p>
+<div class="favorite-container" fxLayout="column">
+    <div class="favorite-header" fxLayout="row" fxLayoutAlign="space-between" fxFlex="100%">
+        <h1 class="color-white">Favoritos</h1>
+    </div>
+
+    <div class="favorite-content mt-4" fxLayout="column" fxLayoutAlign="center center">
+        <app-character-list-favorites [myFavorites]="myFavorites$ | async"></app-character-list-favorites>
+    </div>
+ 
+</div>
