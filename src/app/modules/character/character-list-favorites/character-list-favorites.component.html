@@ -1,6 +1,6 @@
 <div fxLayout="row wrap" fxLayoutAlign="startstart" class="character-list-container">
     <ng-container *ngIf="myFavorites && myFavorites.length > 0; else noResults">
-        <mat-card *ngFor="let character of myFavorites " fxFlex="30" class="character-card">
+        <mat-card *ngFor="let character of myFavorites " fxFlex.sm="50" fxFlex.md="33" fxFlex.lg="30"class="character-card">
             <div class="card-header">
                 <img mat-card-image [src]="character.image" alt="{{ character.name }}">
                 <button mat-icon-button class="favorite-icon">

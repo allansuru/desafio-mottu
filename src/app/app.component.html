@@ -1,20 +1,23 @@
 <mat-sidenav-container fullscreen>
-
   <mat-toolbar color="primary" class="mat-elevation-z4">
     <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
-
-      <span class="text-xl font-bold creepster-title ">Rick and Morty</span>
-
+      <span class="text-xl font-bold creepster-title responsive-title">Rick and Morty</span>
       <div fxFlex></div>
-
-      <mat-button-toggle-group #group="matButtonToggleGroup" class="rounded-toggle-group" appearance="legacy">
+      <mat-button-toggle-group 
+        #group="matButtonToggleGroup" 
+        class="rounded-toggle-group" 
+        appearance="legacy" 
+        fxLayout="row" 
+        fxLayoutAlign="space-around center" 
+        fxFlex.sm="50" 
+       >
         <mat-button-toggle value="home" routerLink="/home" checked>
           <mat-icon class="ml-1">home</mat-icon>
-          <span  class="ml-1">Inicio</span>
+          <span class="ml-1">Inicio</span>
         </mat-button-toggle>
         <mat-button-toggle value="favorito" routerLink="/favorite">
           <mat-icon>favorite</mat-icon>
-          <span  class="ml-1">Favoritos</span>
+          <span class="ml-1">Favoritos</span>
           <strong class="count-favorites ml-2">{{count$ | async}}</strong>
         </mat-button-toggle>
       </mat-button-toggle-group>

@@ -1,6 +1,6 @@
 <div fxLayout="row wrap" fxLayoutAlign="start start" class="character-list-container">
     <ng-container *ngIf="_data && _data.length > 0; else noResults">
-        <mat-card *ngFor="let character of _data " fxFlex="30" class="character-card">
+        <mat-card *ngFor="let character of _data"  fxFlex.sm="50" fxFlex.md="33" fxFlex.lg="30" class="character-card">
             <div class="card-header">
                 <img mat-card-image [src]="character.image" alt="{{ character.name }}">
                 <button mat-icon-button class="favorite-icon" (click)="toggleFavorite(character)">
@@ -15,13 +15,11 @@
     </ng-container>
     <ng-template #noResults>
         <div class="no-results" fxLayout="column" fxLayoutAlign="center center">
-          <div class="no-results-box"  fxLayout="column"  fxLayoutAlign="center center">
-            <h1>Nada foi encontrado!</h1>
+          <div class="no-results-box mt-4" fxLayout="column" fxLayoutAlign="center center">
+            <h1 class="mt-3">Nada foi encontrado!</h1>
             <h2>Tente realizar uma nova busca</h2>
+            <button class="mt-3" mat-raised-button color="primary" routerLink="/home">Voltar ao início</button>
           </div>
         </div>
       </ng-template>
-      
 </div>
-
-
