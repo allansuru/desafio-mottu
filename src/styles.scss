@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./theme/index";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 html,
 body {
@@ -8,12 +10,30 @@ body {
 
 body {
     height: 100%;
-    background-color: #0A0A0A; 
+    background-color: #0A0A0A;
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    color: white; 
-}
-h1, h2, h3, h4, h5, h6 {
-    color: white; 
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+
+@font-face {
+    font-family: 'Creepster';
+    src: url('https://fonts.gstatic.com/s/creepster/v13/AlZy_zVUqJz4yMrniH4hdQ.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.creepster-font {
+    font-family: 'Creepster', cursive;
+}

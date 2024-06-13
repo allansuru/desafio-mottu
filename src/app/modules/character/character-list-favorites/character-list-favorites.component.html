@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-around start" class="character-list-container">
+<div fxLayout="row wrap" fxLayoutAlign="startstart" class="character-list-container">
     <ng-container *ngIf="myFavorites && myFavorites.length > 0; else noResults">
         <mat-card *ngFor="let character of myFavorites " fxFlex="30" class="character-card">
             <div class="card-header">
@@ -8,8 +8,8 @@
                 </button>
             </div>
             <mat-card-content>
-                <h2>{{ character.name }}</h2>
-                <p>{{ character.species }}</p>
+                <h2 class="creepster-title-content">{{ character.name }}</h2>
+                <p class="creepster-title-content">{{ character.species }}</p>
             </mat-card-content>
         </mat-card>
     </ng-container>

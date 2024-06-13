@@ -17,9 +17,6 @@
   
   .no-results {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     
   }
@@ -28,13 +25,13 @@
     background-color: #0A0A0A;
     color: white;
     border-radius: 15px;
-
     text-align: center;
     height:40vh;
     min-width: 1250px
   }
   
   .favorite-icon {
+    cursor: auto;
     position: absolute;
     top: 8px;
     right: 8px;
