@@ -7,7 +7,7 @@ import * as characterReducers from '../character/shared/store/character.reducers
 import { CharacterListComponent } from './character-list/character-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
-
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
   imports: [
     CommonModule,
     MatCardModule,
+    MatIconModule,
     FlexLayoutModule,
     FlexModule,
     StoreModule.forFeature(

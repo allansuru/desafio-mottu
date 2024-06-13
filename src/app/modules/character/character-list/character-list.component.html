@@ -1,7 +1,12 @@
-<div fxLayout="row wrap"  fxLayoutAlign="space-around start" class="character-list-container">
+<div fxLayout="row wrap" fxLayoutAlign="space-around start" class="character-list-container">
     <ng-container *ngIf="data && data.length > 0; else noResults">
       <mat-card *ngFor="let character of data" fxFlex="30" class="character-card">
-        <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+        <div class="card-header">
+          <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+          <button mat-icon-button class="favorite-icon" (click)="addToFavorites(character)">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
         <mat-card-content>
           <h2>{{ character.name }}</h2>
           <p>{{ character.species }}</p>

@@ -49,15 +49,26 @@ const CharacterReducer = createReducer(
     })),
   
     on(CharacterAction.fetchCharactersSuccess, (state, action) => {
-   
       return adapter.setAll(action.data, {
         ...state,
         characters: action.data,
         ...{ loading: false, },
       });
     }
-    )
-);
+    ),
+    on(CharacterAction.addFavorite, (state, { data }) => {
+      const isFavorite = state.favorites.some(fav => fav.id === data.id);
+      const favorites = isFavorite
+        ? state.favorites.filter(fav => fav.id !== data.id)
+        : [...state.favorites, data];
+  
+      return {
+        ...state,
+        favorites
+      };
+    })
+  );
+
 
 export function reducer(state: State | undefined, action: Action) {
     return CharacterReducer(state, action);

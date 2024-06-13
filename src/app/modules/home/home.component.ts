@@ -5,7 +5,7 @@ import { HomeAction } from './shared/enums/home-action.enum';
 import { ComponentEvent } from '@core/abstract-classes/component-event-handler/component-event';
 import { Store, select } from '@ngrx/store';
 import { Character } from '../character/shared/interfaces/character.interface';
-import { fetchCharacters } from '../character/shared/store/character.actions';
+import { addFavorite, fetchCharacters } from '../character/shared/store/character.actions';
 import { selectAllCharacters, selectCharacterLoading } from '../character/shared/store/character.selectors';
 import { myAnimations } from '@core/animations';
 
@@ -43,6 +43,9 @@ export class HomeComponent implements OnInit {
             case HomeAction.SEARCH:
                 this.homeStore.dispatch(fetchCharacters({ data: event.data }))
                 break;
+                case HomeAction.FAVORITE:
+                    this.homeStore.dispatch(addFavorite({ data: event.data }))
+                    break;
 
             default:
                 break;
