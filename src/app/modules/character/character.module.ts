@@ -13,6 +13,7 @@ import { CharacterRoutingModule } from './character-routing.module';
 import { CharacterListFavoritesComponent } from './character-list-favorites/character-list-favorites.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     MatCardModule,
+    MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
     FlexModule,

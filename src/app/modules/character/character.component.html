@@ -1,9 +1,9 @@
 <div class="favorite-container" fxLayout="column">
-    <div class="favorite-header" fxLayout="row" fxLayoutAlign="space-between" fxFlex="100%">
+    <div class="favorite-header" fxLayout="row" fxLayoutAlign="space-between" fxFlex="100%"   [@animate]="{ value: '*', params: { delay: '100ms', x: '-25px' } }">
         <h1 class="color-white">Favoritos</h1>
     </div>
 
-    <div class="favorite-content mt-4" fxLayout="column" fxLayoutAlign="center center">
+    <div class="favorite-content mt-4" fxLayout="column" fxLayoutAlign="center center"   [@animate]="{ value: '*', params: { delay: '100ms', x: '-25px' } }">
         <app-character-list-favorites [myFavorites]="myFavorites$ | async"></app-character-list-favorites>
     </div>
  

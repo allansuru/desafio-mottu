@@ -5,10 +5,9 @@
 
       <span class="text-xl font-bold">Rick and Morty</span>
 
-
       <div fxFlex></div>
 
-      <mat-button-toggle-group [(value)]="selectedModule" #group="matButtonToggleGroup" class="rounded-toggle-group" appearance="legacy">
+      <mat-button-toggle-group #group="matButtonToggleGroup" class="rounded-toggle-group" appearance="legacy">
         <mat-button-toggle value="home" routerLink="/home" checked>
           <mat-icon class="ml-1">home</mat-icon>
           <span  class="ml-1">Inicio</span>

@@ -10,8 +10,7 @@ import { selectCharacterFavoritesLenght } from './modules/character/shared/store
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'desafio-mottu';
-  selectedModule = 'inicio'; 
+
   count$!: Observable<number>
 
   constructor(private homeStore: Store<{ character: Character }> ) {

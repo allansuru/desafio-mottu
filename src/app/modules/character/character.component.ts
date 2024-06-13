@@ -3,12 +3,14 @@ import { Character } from './shared/interfaces/character.interface';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { selectCharacterFavorites } from './shared/store/character.selectors';
+import { myAnimations } from '@core/animations';
 
 
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss'],
+  animations: myAnimations,
 
 })
 export class CharacterComponent implements OnInit {
