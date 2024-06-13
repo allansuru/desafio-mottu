@@ -8,10 +8,13 @@ import { CharacterListComponent } from './character-list/character-list.componen
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
+import { CharacterComponent } from './character.component';
+import { CharacterRoutingModule } from './character-routing.module';
 
 @NgModule({
   declarations: [
-    CharacterListComponent
+    CharacterListComponent,
+    CharacterComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
       characterReducers.reducer
     ),
     EffectsModule.forFeature([CharacterEffects]),
+    CharacterRoutingModule
   ],
   exports: [
       CharacterListComponent
