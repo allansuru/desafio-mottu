@@ -1,1 +1,18 @@
-{{data | json}}
+<div fxLayout="row wrap"  fxLayoutAlign="space-around start" class="character-list-container">
+    <ng-container *ngIf="data && data.length > 0; else noResults">
+      <mat-card *ngFor="let character of data" fxFlex="30" class="character-card">
+        <img mat-card-image [src]="character.image" alt="{{ character.name }}">
+        <mat-card-content>
+          <h2>{{ character.name }}</h2>
+          <p>{{ character.species }}</p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+    <ng-template #noResults>
+      <div class="no-results" fxLayout="column" fxLayoutAlign="center center">
+        <h1>Nada foi encontrado!</h1>
+        <h2>Tente realizar uma nova busca</h2>
+      </div>
+    </ng-template>
+  </div>
+  

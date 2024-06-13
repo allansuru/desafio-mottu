@@ -7,12 +7,14 @@ import { Store, select } from '@ngrx/store';
 import { Character } from '../character/shared/interfaces/character.interface';
 import { fetchCharacters } from '../character/shared/store/character.actions';
 import { selectAllCharacters, selectCharacterLoading } from '../character/shared/store/character.selectors';
+import { myAnimations } from '@core/animations';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    animations: myAnimations,
 })
 export class HomeComponent implements OnInit {
     loading$!: Observable<boolean>;

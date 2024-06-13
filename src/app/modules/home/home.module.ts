@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CharacterModule } from '../character/character.module';
+import { SpinnerModule } from '@core/layout/spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CharacterModule } from '../character/character.module';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    CharacterModule
+    CharacterModule,
+    SpinnerModule
   ]
 })
 export class HomeModule { }
